@@ -1,10 +1,21 @@
 *{box-sizing: border-box; margin: 0;}
 div{padding: 25px; text-align: center;}
-h1{text-align: center; padding: 25px; background-color: #255538; color: white;}
-body{background-color: #f3e5d8;}
-#Recetario{color: #7e4333;text-align: left; background-color: white; padding: 25px; margin: 20px; box-sizing: border-box;}
+
+body{
+    background-color: #f3e5d8;
+    box-sizing: border-box;
+}
 h3{background-image: url(./imagenes04/cocina.avif); color: #f3e5d8; text-align: center; padding: 25px; margin: 20px; box-sizing: border-box;}
 table, td{border-bottom: 1px solid black; table-layout:fixed; border-collapse: collapse; padding-right: 55px;}
+.titular{
+    background-color: #255538;
+    padding: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
 #popup{
     display: flex;
     justify-content: space-evenly;
@@ -20,23 +31,37 @@ table, td{border-bottom: 1px solid black; table-layout:fixed; border-collapse: c
 }
 .pestanas{
     border-radius: 30%;
-
-}
-#pestana1{
-
     background-color: #255538;
-}
-#pestana2{
-    background-color: #255538
-}
-#pestana3{
-    background-color: #255538;
+
 }
 
-#Recetario{
+.Recetario{
     color: #7e4333;
     text-align: left;
     border: solid 1px black;
-    padding: 40px;
+    background-color: white;
+    padding: 20px;
     margin: 100px;
+
+}
+
+@media (max-width: 601px){
+    #popup{
+        flex-direction: column;
+        gap: 4px;
+        margin: 20px 0;
+    }
+    h3{
+        display: none;
+    }
+    .pestanas{
+        width: 100%;
+        border-radius: 20px;
+    }
+    h2{
+    font-size: 40px;
+    }
+    .Recetario{
+        margin: 10px;
+    }
 }
